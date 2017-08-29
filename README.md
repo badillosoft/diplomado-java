@@ -15,4 +15,35 @@ Bienvenidos al diplomado de Java
 
 ## Tareas
 
+* Crear una clase llamada `Calculadora` que posea el atributo `resultado: double` que almacena el último resultado computado. Crea 4 métodos `suma(a: double, b: double): double` que devuelva la suma de `a` y `b`, lo mismo para `resta(a: double, b: double): double`, `multiplicacion(a: double, b: double): double` y `division(a: double, b: double): double`. No olvides actualizar el atributo resultado en cada operación antes de devolverlo.
+
 ## Ejercicios
+
+* Crea una variable de cada tipo con valores dados e imprimelos en la pantalla usando formato de cadenas con `printf` como en el siguiente ejemplo:
+
+~~~java
+...
+double x = 123.45;
+...
+System.out.printf("X: %f", x);
+~~~
+
+* Crea un programa que solicite de la entrada estándar las variables `a` y `b` que son dos números reales que representan el intervalo cerrado `[a, b]`. Luego solicite `x` también real e imprima `"x está en [a, b]"` o `"x no está en [a, b]"`, dependiendo si `x` pertenece o no al intervalo `[a, b]`.
+
+* El siguiente programa genera los primeros `n` números de Fibonacci, sin embargo, faltan líneas de código para funcionar.
+
+~~~java
+public class Ejercicio {
+  public static void main(String[] args) {
+    int n = 10;
+    int a = 1, b = 1, c;
+    System.out.printf("%d %d ", a, b);
+    for (int i = 2; i < n; i++) {
+      c = a + b;
+      // TODO: Asigna el valor de `b` a `a` y el de `c` a `b` en ese orden
+      // TODO: Imprime el valor de `c` y un espacio
+    }
+    System.out.println();
+  }
+}
+~~~
