@@ -50,4 +50,14 @@ class Main {
 
 > https://repl.it/K5lt/0
 
-* En el siguiente ejemplo https://repl.it/K5m1/0 se muestra un programa que imprime si un número es par o impar. Investiga como funciona el operador `condición ? exprV : exprF` conocido como el operador condicional, que actua como un if-else para asignar variables.
+* En el siguiente ejemplo https://repl.it/K5m1/0 se muestra un programa que imprime si un número es par o impar. Investiga como funciona el operador `condición ? exprV : exprF` conocido como el operador condicional, que actua como un `if-else` para asignar variables.
+
+* Crea un programa que imprima tus iniciales (la primer letra de nombre y apellidos) mediante asteriscos como en el siguiente ejemplo
+
+~~~txt
+  ****    ****     ******
+ **  **   **  *    **
+********  *****    ******
+**    **  **   *       **
+**    **  ******   ******
+~~~
