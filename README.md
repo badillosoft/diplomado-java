@@ -61,3 +61,11 @@ class Main {
 **    **  **   *       **
 **    **  ******   ******
 ~~~
+
+* Modifica el programa https://repl.it/K5os/0 para que dado el valor de dado, el programa indique cual es su cara opuesta (nota: la suma de la cara más su opuesta siempre es 7).
+
+* Modifica el programa de los dados https://repl.it/K5os/0 para mostrar el valor de lanzar el dado dos veces y su suma.
+
+* Crea un programa que le pida el nombre al usuario y lo salude, por ejemplo: `Hola BATAMAN, buenos días`. Investiga como convertir a mayúsculas para mostrar el resultado así.
+
+* Crea un programa que pida el número de huevos en una caja e indique cuántas docenas tiene y cuántos huevos sueltos. Por ejemplo, si el usuario ingresa `128` el programa debe decir: `tienes 10 docenas y 8 huevos`. Si `n` es el número de huevos, entonces el número de docenas es la parte entera de `n / 12` y los sobrantes son `n % 12`.
