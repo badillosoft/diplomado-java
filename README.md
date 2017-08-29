@@ -33,7 +33,7 @@ System.out.printf("X: %f", x);
 * El siguiente programa genera los primeros `n` números de Fibonacci, sin embargo, faltan líneas de código para funcionar.
 
 ~~~java
-public class Ejercicio {
+class Main {
   public static void main(String[] args) {
     int n = 10;
     int a = 1, b = 1, c;
@@ -47,3 +47,7 @@ public class Ejercicio {
   }
 }
 ~~~
+
+> https://repl.it/K5lt/0
+
+* En el siguiente ejemplo https://repl.it/K5m1/0 se muestra un programa que imprime si un número es par o impar. Investiga como funciona el operador `condición ? exprV : exprF` conocido como el operador condicional, que actua como un if-else para asignar variables.
