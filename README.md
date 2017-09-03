@@ -1,5 +1,7 @@
 # Diplomado Java (Módulos I y II)
 
+Intructor: Alan Badillo Salas badillo.soft@hotmai.com
+
 Bienvenidos al diplomado de Java
 
 ## Enlaces
