@@ -15,6 +15,10 @@ Bienvenidos al diplomado de Java
 ### Presentaciones
 > https://slides.com/alanbadillosalas/fundamentos-de-java-sesion-1/
 
+### Grupo WhatsApp 
+
+https://chat.whatsapp.com/2acSx0BKYmcLKqejsVo9BU
+
 ## Tareas
 
 * Crear una clase llamada `Calculadora` que posea el atributo `resultado: double` que almacena el último resultado computado. Crea 4 métodos `suma(a: double, b: double): double` que devuelva la suma de `a` y `b`, lo mismo para `resta(a: double, b: double): double`, `multiplicacion(a: double, b: double): double` y `division(a: double, b: double): double`. No olvides actualizar el atributo resultado en cada operación antes de devolverlo.
