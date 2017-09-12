@@ -42,7 +42,7 @@ X: 1 4 3 2 6 8 5 9 0 # La unión de N y O
 unico(X): true
 ~~~
 
-## Problema 2
+### Problema 2
 
 Crea un arreglo dados `N` y `O` de tal forma que tome un elemento de cada uno, empezando por `N`. Los siguientes elementos serán del arreglo de mayor tamaño. Llama `A` el arreglo alternado.
 
