@@ -2,11 +2,11 @@
 
 Por Alan Badillo Salas badillo.soft@hotmail.com
 
-## Ceder el paso
+## Ceder el paso
 
 En dos arreglos `N` y `O` se han dispuesto los id's de diferentes carros que necesitan continuar su trayecto recto, los carros de `N` van hacia el norte y los de `O` van hacia el oeste, por lo que sus autopistas se cruzan. 
 
-### Problema 1
+### Problema 1
 
 Se requiere un programa que dado un arreglo `X` determine si todos sus elementos son únicos. Para esto puede tomar el primer elemento, recorrer todos los demás y si el elemento es igual que alguno de sus siguientes entonces regresar `falso`, de otra forma regresar `verdadero` como se muestra en el siguiente pseudocódigo:
 
