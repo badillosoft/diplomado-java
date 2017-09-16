@@ -30,6 +30,8 @@ Bienvenidos al diplomado de Java
 
 > http://slides.com/alanbadillosalas/fundamentos-de-java-sesion-1-9/fullscreen
 
+> https://slides.com/alanbadillosalas/javaiostreams/
+
 ### Grupo WhatsApp 
 
 https://chat.whatsapp.com/2acSx0BKYmcLKqejsVo9BU
