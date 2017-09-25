@@ -32,6 +32,16 @@ Bienvenidos al diplomado de Java
 
 > https://slides.com/alanbadillosalas/javaiostreams/
 
+## Videos
+
+> Sesión Extra 1 - https://youtu.be/6tPCNaSvWC0
+
+> Sesión Extra 2 - https://youtu.be/POhPIkz0YdM
+
+> Sesión Extra 3 - https://youtu.be/dGg0qUt3am
+
+> Sesión Extra 4 - https://youtu.be/nVlF0a9NVuk
+
 ### Grupo WhatsApp 
 
 https://chat.whatsapp.com/2acSx0BKYmcLKqejsVo9BU
