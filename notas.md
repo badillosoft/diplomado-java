@@ -432,9 +432,35 @@ productos.put("B792313", new Product("Galletas Marías"));
 Product producto = productos.get("F9985788");
 ~~~
 
-## Eventos/Controladores
-
 ## Hilos
+
+Es un proceso que se ejecuta de forma independiente y sirven para paralelizar tareas estructuradas mediante métodos y clases.
+
+Supongamos que tenemos la clase _A_ que resuelve una tarea mediante los métodos _foo_ y _bar_. Para proveer a la clase _A_ la posibilidad de ejecutarse en un hilo, tenemos que implementar la interfaz `Runnable`, esta interfaz expone un método llamado `public void run()`, al implementar el método en la clase, cuando los objetos de la clase son envueltos en un hilo, al iniciar el hilo se ejecutará el método `run` realizando todas las tareas que se hayan programado ahí. Por ejemplo, dentro de _run_ podemos llamar a los métodos `foo` y `bar` o realizar tareas comunes como creación de variables y flujos.
+
+Si nosotros llamamos manualmente al método `run`, este se ejecuta en hilo principal del programa, bloqueando el hilo principal hasta que termine:
+
+~~~java
+A a = new A();
+
+a.run(); // Tarda 20 segundos en completar su tarea
+
+System.out.println(); // Se ejecuta tras 20 segundos
+~~~
+
+Usando hilos, podemos programar un hilo independiente al principal las clases que hayan implementado `Runnable`.
+
+~~~java
+A a = new A();
+
+Thread t = new Thread(a);
+
+t.start(); // Comienza a ejecutar el hilo.
+
+System.out.println(); // Se ejecuta inmediatamente.
+~~~
+
+## Eventos/Controladores
 
 ## Sockets
 

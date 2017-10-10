@@ -1,0 +1,5 @@
+Coca-Cola 600ml;Refresco;12.5
+Coca-Cola 2.5L;Refresco;22.5
+Coca-Cola 3L;Refresco;33
+Galletas Marias;Galletas;8.5
+Galletas Emperador;Galletas;15
