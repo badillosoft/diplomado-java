@@ -24,6 +24,10 @@ Bienvenidos al diplomado de Java
 
 > http://spring.io/guides/gs/validating-form-input/
 
+### Ejercicios de Java
+
+> http://puntocomnoesunlenguaje.blogspot.mx/p/ejercicios.html
+
 ### Presentaciones
 
 > https://slides.com/alanbadillosalas/fundamentos-de-java-sesion-1/
