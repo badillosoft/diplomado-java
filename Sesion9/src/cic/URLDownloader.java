@@ -61,6 +61,8 @@ public class URLDownloader {
             i++;
         }
         
+        System.out.printf("Progreso %s: 100%%\n", this.url);
+        
         in.close();
         out.close();
     }
