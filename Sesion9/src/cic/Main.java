@@ -21,7 +21,9 @@ public class Main {
             
             URLDownloader downloader = new URLDownloader(url, path, name);
             
-            downloader.download();
+            Thread t = new Thread(downloader);
+            
+            t.start();
         }
     }
     
