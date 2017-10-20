@@ -357,7 +357,7 @@ IStreamSave fs_2 = new FakeStreamSave();
 fs_2.save(in);
 ~~~
 
-# Flujos de datos (_Streams_)
+## Flujos de datos (_Streams_)
 
 Son secuencias de bytes procesadas a tráves de distintas clases que extraen dichos flujos de diversas partes, desde un archivo, desde una url, desde un socket, entre otros. Estos pueden ser de entrada (lectura) o de salida (escritura).
 
@@ -459,13 +459,3 @@ t.start(); // Comienza a ejecutar el hilo.
 
 System.out.println(); // Se ejecuta inmediatamente.
 ~~~
-
-## Eventos/Controladores
-
-## Sockets
-
-## GUI
-
-## Etiquetas
-
-## Botones
