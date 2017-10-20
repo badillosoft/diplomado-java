@@ -1,8 +1,8 @@
 # Notas del Diplomado de Java (Módulos I y II)
 
-# Conceptos Fundamentales
+## - Conceptos Fundamentales -
 
-# Variables y tipos de datos
+## Variables y tipos de datos
 
 * __Variables__ - Almacenan valores de un tipo de dato.
 
