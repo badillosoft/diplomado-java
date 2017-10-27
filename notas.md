@@ -1,4 +1,4 @@
-# Notas del Diplomado de Java (Módulos I y II)
+# Notas del Diplomado de Java - Módulo I
 
 ## - Conceptos Fundamentales -
 
@@ -141,7 +141,8 @@ class Persona {
     float estatura;
 
     void saludar() {
-        System.out.printf("Hola me llamo %s tengo %d años y mido %.2f metros.", nombre, edad, estatura);
+        System.out.printf("Hola me llamo %s tengo %d años " +
+        	" y mido %.2f metros.", nombre, edad, estatura);
     }
 
 }
