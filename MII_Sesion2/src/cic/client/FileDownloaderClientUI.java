@@ -58,6 +58,11 @@ public class FileDownloaderClientUI extends javax.swing.JFrame {
         });
 
         jButton2.setText("Descargar");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -104,6 +109,23 @@ public class FileDownloaderClientUI extends javax.swing.JFrame {
             //
         }
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        switch(fc.showSaveDialog(this)) {
+            case JFileChooser.APPROVE_OPTION:
+                File destino = fc.getSelectedFile();
+                int i = this.jList1.getSelectedIndex();
+                if (i >= 0) {
+                    File seleccionado = this.client.files.get(i);
+                    try {
+                        this.client.download("localhost", 2001, seleccionado, destino);
+                    } catch (IOException ex) {
+                        //
+                    }
+                }
+                break;
+        }
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments
