@@ -5,6 +5,8 @@ import javax.swing.DefaultComboBoxModel;
 import javax.swing.DefaultListModel;
 import javax.swing.ImageIcon;
 import javax.swing.JFileChooser;
+import javax.swing.event.DocumentEvent;
+import javax.swing.event.DocumentListener;
 import javax.swing.filechooser.FileNameExtensionFilter;
 
 public class MiVentana extends javax.swing.JFrame {
@@ -12,12 +14,38 @@ public class MiVentana extends javax.swing.JFrame {
     JFileChooser ofc = new JFileChooser();
     JFileChooser sfc = new JFileChooser();
     
+    String ans = "";
+    
     public MiVentana() {
         initComponents();
         
         FileNameExtensionFilter filter2 = new FileNameExtensionFilter("Documentos", "txt", "doc", "docx");
 
         this.ofc.addChoosableFileFilter(filter2);
+        
+        this.jTextArea1.getDocument().addDocumentListener(new DocumentListener() {
+
+            @Override
+            public void insertUpdate(DocumentEvent e) {
+                if (!jTextArea1.getText().equals(ans)) {
+                    jLabel1.setText("Sin guardar");
+                }
+            }
+
+            @Override
+            public void removeUpdate(DocumentEvent e) {
+                if (!jTextArea1.getText().equals(ans)) {
+                    jLabel1.setText("Sin guardar");
+                }
+            }
+
+            @Override
+            public void changedUpdate(DocumentEvent e) {
+                if (!jTextArea1.getText().equals(ans)) {
+                    jLabel1.setText("Sin guardar");
+                }
+            }
+    });
     }
 
     @SuppressWarnings("unchecked")
@@ -28,6 +56,7 @@ public class MiVentana extends javax.swing.JFrame {
         jButton2 = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
@@ -45,10 +74,17 @@ public class MiVentana extends javax.swing.JFrame {
         });
 
         jButton2.setText("guardar");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
         jScrollPane2.setViewportView(jTextArea1);
+
+        jLabel1.setText("jLabel1");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -58,7 +94,8 @@ public class MiVentana extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(jLabel1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jButton2)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jButton1))
@@ -73,7 +110,8 @@ public class MiVentana extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton1)
-                    .addComponent(jButton2))
+                    .addComponent(jButton2)
+                    .addComponent(jLabel1))
                 .addContainerGap())
         );
 
@@ -102,6 +140,26 @@ public class MiVentana extends javax.swing.JFrame {
                 break;
         }
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        int result = ofc.showSaveDialog(this);
+        
+         switch(result) {
+            case JFileChooser.APPROVE_OPTION:
+                // Archivo seleccionado
+                File f = this.ofc.getSelectedFile();
+                System.out.println(f.getAbsolutePath());
+                this.ans = this.jTextArea1.getText();
+                jLabel1.setText("Guardado");
+                break;
+            case JFileChooser.CANCEL_OPTION:
+                // Selección cancelada
+                break;
+            case JFileChooser.ERROR_OPTION:
+                // Error durante la selección del archivo
+                break;
+        }
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     public static void main(String args[]) {
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -136,6 +194,7 @@ public class MiVentana extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTextArea jTextArea1;
     // End of variables declaration//GEN-END:variables
