@@ -6,7 +6,7 @@ import java.io.ObjectInputStream;
 import java.net.Socket;
 import java.util.ArrayList;
 
-public class FileUploaderClient {
+public class FileDownloaderClient {
     
     Socket client;
     
@@ -14,13 +14,14 @@ public class FileUploaderClient {
     
     void refresh(String host, int port) throws IOException, ClassNotFoundException {
         this.client = new Socket(host, port);
+        
         ObjectInputStream in = new ObjectInputStream(this.client.getInputStream());
         
         this.files = (ArrayList<File>)in.readObject();
     }
     
     public static void main(String[] args) throws IOException, ClassNotFoundException {
-        FileUploaderClient fuc = new FileUploaderClient();
+        FileDownloaderClient fuc = new FileDownloaderClient();
         
         fuc.refresh("localhost", 2001);
         

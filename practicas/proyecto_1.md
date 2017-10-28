@@ -1,6 +1,6 @@
 # Proyecto I - JNotePad v1.0
 
-`JNotePad` será nuestro primer proyecto y consiste en crear un pequeño editor de texto plano mediante `JTextArea` y dos botones para abrir y guaVrdar.
+`JNotePad` será nuestro primer proyecto y consiste en crear un pequeño editor de texto plano mediante `JTextArea` y dos botones para abrir y guardar.
 
 ## Diseño
 

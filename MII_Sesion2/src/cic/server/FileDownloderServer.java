@@ -7,13 +7,13 @@ import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.ArrayList;
 
-public class FileUploaderServer implements Runnable {
+public class FileDownloderServer implements Runnable {
     
     ServerSocket server;
     
     ArrayList<File> files;
     
-    FileUploaderServer(int port, ArrayList<File> files) throws IOException {
+    FileDownloderServer(int port, ArrayList<File> files) throws IOException {
         this.server = new ServerSocket(port);
         this.files = files;
     }
@@ -46,7 +46,7 @@ public class FileUploaderServer implements Runnable {
         files.add(new File("C:/test/archivo.txt"));
         files.add(new File("C:/test/archivo.mp4"));
         
-        FileUploaderServer fus = new FileUploaderServer(2001, files);
+        FileDownloderServer fus = new FileDownloderServer(2001, files);
         
         Thread t = new Thread(fus);
         
