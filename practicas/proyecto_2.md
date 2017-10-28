@@ -18,7 +18,7 @@ while(true) {
 }
 ~~~
 
-## Enviar un objeto del servidor al cliente
+## Enviar un objeto del servidor al cliente
 
 ~~~java
 Socket client = server.accept();
@@ -28,7 +28,7 @@ ObjectOutputStream out = new ObjectOutputStream(client.getOutputStream());
 out.writeObject(obj);
 ~~~
 
-## Montar un cliente
+## Montar un cliente
 
 ~~~java
 Socket client = new Socket("localhost", 2001);
