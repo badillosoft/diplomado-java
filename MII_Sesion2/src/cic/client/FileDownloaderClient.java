@@ -39,6 +39,8 @@ public class FileDownloaderClient {
         while ((b = in.read()) != -1) {
             fout.write(b);
         }
+        
+        fout.close();
     }
     
     public static void main(String[] args) throws IOException, ClassNotFoundException {
