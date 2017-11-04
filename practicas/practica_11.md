@@ -12,7 +12,7 @@ Hay veces en los que necesitamos mezclar la interfaz gráfica tradicional con un
 
 * Crea un JFrame con cuatro cajas de texto `txt_x1` y así sucesivamente y agrega también el `JPanel` que dibuja la línea.
 
-* En el evento `keyReleased` de cada caja ajusta los atributos `x1`, `x2`, `y1`, `y2` según corresponda.
+* En el evento `keyReleased` de cada caja ajusta los atributos `x1`, `x2`, `y1`, `y2` según corresponda. **Nota: Llama al método `repaint()` del `JPanel`**
 
 * Cambia la línea a color rojo.
 

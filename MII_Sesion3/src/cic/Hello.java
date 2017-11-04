@@ -14,6 +14,11 @@ import java.awt.Graphics;
  */
 public class Hello extends javax.swing.JPanel {
 
+    public int x1;
+    public int y1;
+    public int x2;
+    public int y2;
+    
     /**
      * Creates new form Hello
      */
@@ -25,7 +30,7 @@ public class Hello extends javax.swing.JPanel {
     public void paint(Graphics g) {
         super.paint(g);
         
-        g.drawRect(0, 0, 100, 100);
+        g.drawLine(x1, y1, x2, y2);
     }
 
     

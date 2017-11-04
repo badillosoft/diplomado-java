@@ -28,7 +28,10 @@ public class MiVentana extends javax.swing.JFrame {
     private void initComponents() {
 
         hello3 = new cic.Hello();
-        hello4 = new cic.Hello();
+        txt_x1 = new javax.swing.JTextField();
+        txt_x2 = new javax.swing.JTextField();
+        txt_y1 = new javax.swing.JTextField();
+        txt_y2 = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -36,23 +39,25 @@ public class MiVentana extends javax.swing.JFrame {
         hello3.setLayout(hello3Layout);
         hello3Layout.setHorizontalGroup(
             hello3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 374, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
         );
         hello3Layout.setVerticalGroup(
             hello3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 136, Short.MAX_VALUE)
+            .addGap(0, 154, Short.MAX_VALUE)
         );
 
-        javax.swing.GroupLayout hello4Layout = new javax.swing.GroupLayout(hello4);
-        hello4.setLayout(hello4Layout);
-        hello4Layout.setHorizontalGroup(
-            hello4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 321, Short.MAX_VALUE)
-        );
-        hello4Layout.setVerticalGroup(
-            hello4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 161, Short.MAX_VALUE)
-        );
+        txt_x1.setText("0");
+        txt_x1.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                txt_x1KeyReleased(evt);
+            }
+        });
+
+        txt_x2.setText("0");
+
+        txt_y1.setText("0");
+
+        txt_y2.setText("0");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -61,22 +66,40 @@ public class MiVentana extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(hello4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(hello3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(180, Short.MAX_VALUE))
+                    .addComponent(hello3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(txt_x1, javax.swing.GroupLayout.DEFAULT_SIZE, 285, Short.MAX_VALUE)
+                    .addComponent(txt_x2)
+                    .addComponent(txt_y1)
+                    .addComponent(txt_y2))
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(hello3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(txt_x1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(hello4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(txt_x2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(txt_y1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(txt_y2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(hello3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void txt_x1KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_x1KeyReleased
+        try {
+            this.hello3.x1 = Integer.parseInt(txt_x1.getText());
+            this.hello3.repaint();
+        } catch(Exception e) {
+            
+        }
+    }//GEN-LAST:event_txt_x1KeyReleased
 
     /**
      * @param args the command line arguments
@@ -115,6 +138,9 @@ public class MiVentana extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private cic.Hello hello3;
-    private cic.Hello hello4;
+    private javax.swing.JTextField txt_x1;
+    private javax.swing.JTextField txt_x2;
+    private javax.swing.JTextField txt_y1;
+    private javax.swing.JTextField txt_y2;
     // End of variables declaration//GEN-END:variables
 }
