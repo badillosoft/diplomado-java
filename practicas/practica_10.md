@@ -32,9 +32,9 @@ Existen otros métodos que nos permitirán trazar arcos, líneas, imágenes o aj
 
 ## Problemas
 
-* Crea un `Panel` en el proyecto.
+* Crea un `JPanel` en el proyecto.
 
-* Agrega al menos 10 rellenos rectángulos en las posiciones y tamaños que desees.
+* Agrega al menos 10 rectángulos en las posiciones y tamaños que desees.
 
 * Crea un `JFrame` y agrega dos veces el panel desde la paleta.
 
