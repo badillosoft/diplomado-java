@@ -54,10 +54,25 @@ public class MiVentana extends javax.swing.JFrame {
         });
 
         txt_x2.setText("0");
+        txt_x2.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                txt_x2KeyReleased(evt);
+            }
+        });
 
         txt_y1.setText("0");
+        txt_y1.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                txt_y1KeyReleased(evt);
+            }
+        });
 
         txt_y2.setText("0");
+        txt_y2.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                txt_y2KeyReleased(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -94,12 +109,39 @@ public class MiVentana extends javax.swing.JFrame {
 
     private void txt_x1KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_x1KeyReleased
         try {
-            this.hello3.x1 = Integer.parseInt(txt_x1.getText());
+            this.hello3.x1 = Integer.parseInt(this.txt_x1.getText());
             this.hello3.repaint();
         } catch(Exception e) {
             
         }
     }//GEN-LAST:event_txt_x1KeyReleased
+
+    private void txt_x2KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_x2KeyReleased
+        try {
+            this.hello3.x2 = Integer.parseInt(this.txt_x2.getText());
+            this.hello3.repaint();
+        } catch(Exception e) {
+            
+        }
+    }//GEN-LAST:event_txt_x2KeyReleased
+
+    private void txt_y1KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_y1KeyReleased
+        try {
+            this.hello3.y1 = Integer.parseInt(this.txt_y1.getText());
+            this.hello3.repaint();
+        } catch(Exception e) {
+            
+        }
+    }//GEN-LAST:event_txt_y1KeyReleased
+
+    private void txt_y2KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_y2KeyReleased
+        try {
+            this.hello3.y2 = Integer.parseInt(this.txt_y2.getText());
+            this.hello3.repaint();
+        } catch(Exception e) {
+            
+        }
+    }//GEN-LAST:event_txt_y2KeyReleased
 
     /**
      * @param args the command line arguments

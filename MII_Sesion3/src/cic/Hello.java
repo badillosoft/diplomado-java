@@ -30,6 +30,7 @@ public class Hello extends javax.swing.JPanel {
     public void paint(Graphics g) {
         super.paint(g);
         
+        g.setColor(Color.red);
         g.drawLine(x1, y1, x2, y2);
     }
 
