@@ -1,4 +1,4 @@
-# Práctica XIII - JTable y MySql
+# Práctica XIV - JTable y MySql
 
 Al momento de insertar una tabla es importante visualizar los datos extraídos de una consulta, una forma de hacerlo es utilizando `JTable` el cual funciona como las lista mediante un modelo `DefaultTableModel` el cual posee métodos para agregar columnas y filas.
 
