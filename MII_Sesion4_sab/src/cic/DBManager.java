@@ -1,4 +1,4 @@
-package mii_sesion4;
+package cic;
 
 import java.sql.*;
 
