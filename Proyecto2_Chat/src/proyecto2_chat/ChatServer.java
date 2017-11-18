@@ -3,6 +3,8 @@ package proyecto2_chat;
 import java.io.*;
 import java.net.*;
 import java.util.*;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class ChatServer {
     
@@ -54,6 +56,11 @@ public class ChatServer {
                             broadcast(clients, message);
                         } catch(Exception e) {
                             System.out.println(e);
+                            try {
+                                client.close();
+                            } catch (IOException ex) {
+                                System.out.println(ex);
+                            }
                             return;
                         }
                     }
