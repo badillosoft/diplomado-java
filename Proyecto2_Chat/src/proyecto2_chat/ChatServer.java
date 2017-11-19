@@ -3,12 +3,61 @@ package proyecto2_chat;
 import java.io.*;
 import java.net.*;
 import java.util.*;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+import java.util.regex.*;
 
 public class ChatServer {
     
+    static String bot_censura_email(String message) {
+        String pattern = "([\\w\\.\\-\\_]+)@\\w+(\\.\\w{2,4}){1,2}";
+        
+        Pattern regex = Pattern.compile(pattern);
+        
+        Matcher matcher = regex.matcher(message);
+        
+        while(matcher.find()) {
+            String email = matcher.group(0);
+            String user = matcher.group(1);
+            int user_start = matcher.start(1);
+            int user_end = matcher.end(1);
+            
+            System.out.printf("Email: %s | Censurar: %s", email, user);
+            
+            String m_left = message.substring(0, user_start + 3);
+            String m_right = message.substring(user_end);
+            String censored = "";
+            for (int i = 3; i < user_end - user_start; i++) {
+                censored += "*";
+            }
+            
+            message = m_left + censored + m_right;
+        }
+        
+        return message;
+    }
+    
+    static String bot_invierte_hola(String message) {
+        String pattern = "hola";
+        
+        Pattern regex = Pattern.compile(pattern, Pattern.CASE_INSENSITIVE);
+        
+        Matcher matcher = regex.matcher(message);
+        
+        while(matcher.find()) {
+            int start = matcher.start(0);
+            int end = matcher.end(0);
+            
+            String m_left = message.substring(0, start);
+            String m_right = message.substring(end);
+            
+            message = m_left + "aloh" + m_right;
+        }
+        
+        return message;
+    }
+    
     static void broadcast(ArrayList<Socket> clients, String message) throws IOException {
+        message = bot_censura_email(message);
+        message = bot_invierte_hola(message);
         // A cada cliente le enviamos el mensaje
         for (Socket client : clients) {
             if (client.isClosed()) {
