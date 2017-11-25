@@ -149,6 +149,8 @@ public class SecuritySuit extends javax.swing.JFrame {
             
             jLabel1.setText(f.getAbsolutePath());
             
+            model.setNumRows(0);
+            
             for (File file : f.listFiles()) {
                 if (file.isFile()) {
                     System.out.println(file.getAbsolutePath());
